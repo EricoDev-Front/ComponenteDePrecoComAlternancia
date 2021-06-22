@@ -1,0 +1,74 @@
+body {
+  font-size: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+section#tituloBotao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%;
+}
+section#tituloBotao .titulo h2 {
+  font-size: 35px;
+  color: hsl(233, 13%, 49%);
+}
+section#tituloBotao .botaoValores {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 29%;
+}
+section#tituloBotao .botaoValores p {
+  color: hsl(234, 14%, 74%);
+  position: relative;
+  bottom: 13px;
+}
+section#tituloBotao .botaoValores input[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+}
+section#tituloBotao .botaoValores input#toggle[type=checkbox] {
+  display: none;
+}
+section#tituloBotao .botaoValores label {
+  position: absolute;
+  height: 40px;
+  width: 120px;
+  display: block;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  cursor: pointer;
+  margin: 0 auto;
+}
+section#tituloBotao .botaoValores input[type=checkbox]:checked ~ .switch .button {
+  position: absolute;
+  left: 37px;
+}
+section#tituloBotao .botaoValores .switch {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #FFF;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #090979 16%, #00d4ff 100%);
+  box-shadow: inset 0 0 10px #888888;
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+  height: 30px;
+  width: 65px;
+  margin: 0px auto 30px auto;
+}
+section#tituloBotao .botaoValores .switch .button {
+  display: block;
+  position: absolute;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #AAA;
+  border-radius: 100%;
+  background: #fff;
+  height: 22px;
+  width: 24px;
+  top: 3px;
+  left: 4px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  transition: left 0.25s ease-in-out;
+  -webkit-transition: left 0.25s ease-in-out;
+}

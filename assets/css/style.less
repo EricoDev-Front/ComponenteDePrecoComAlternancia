@@ -1,0 +1,89 @@
+// Cores e gradientes
+@LinearGradient: linear-gradient(90deg, rgba(9,9,121,1) 16%, rgba(0,212,255,1) 100%);
+@VeryLightGrayishBlue: hsl(240, 78%, 98%);
+@LightGrayishBlue: hsl(234, 14%, 74%);
+@GrayishBlue: hsl(233, 13%, 49%);
+@DarkGrayishBlue: hsl(232, 13%, 33%);
+
+// Fontes
+body{
+    font-size: 15px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+section#tituloBotao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7%;
+    .titulo{
+        h2{
+        font-size: 35px;
+        color: @GrayishBlue;
+        }
+    }
+    .botaoValores{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 29%;
+        p{
+            color: @LightGrayishBlue;
+            position: relative;
+            bottom: 13px;
+        }
+        input[type=checkbox] {
+            position: absolute;
+            visibility: hidden;
+        }
+        
+         input#toggle[type=checkbox]{
+             display:none;
+         }
+        
+        
+        label {
+            position: absolute;
+            height: 40px;
+            width: 120px;
+            display: block; 
+            right: 0;
+            left:0;
+            z-index: 9999;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+        input[type=checkbox]:checked ~ .switch .button {
+            position: absolute;
+            left: 37px;
+        }
+        .switch {
+            display: block; 
+            position: relative;
+            border-bottom: 1px solid #FFF;
+            border-radius: 25px;
+            background: @LinearGradient;
+            box-shadow: inset 0 0 10px #888888;
+            -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+            height: 30px;
+            width: 65px;
+            margin: 0px auto 30px auto;
+            .button{
+                display: block; 
+                position: absolute;
+                border-top: 1px solid #FFF;
+                border-bottom: 1px solid #AAA;
+                border-radius: 100%;
+                background: #fff;
+                height: 22px;
+                width: 24px;
+                top: 3px;
+                left: 4px;
+                box-shadow: 0 0 2px rgba(0,0,0,0.25);
+                transition: left .25s ease-in-out;
+                -webkit-transition: left .25s ease-in-out;
+              }
+          }
+    }
+    
+}

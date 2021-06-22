@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+input[type=checkbox] {
+    position: absolute;
+    visibility: hidden;
+}
+
+ input#toggle[type=checkbox]{
+     display:none;
+ }
+
+
+label {
+    position: absolute;
+    height: 40px;
+    width: 120px;
+    display: block; 
+    top: 0px; bottom: 0; right: 0; left:0;
+    z-index: 9999;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.switch {
+  display: block; 
+  position: relative;
+  border-bottom: 1px solid #FFF;
+  border-radius: 25px;
+  background: #34A87C;
+  box-shadow: inset 0 0 10px #888888;
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+  height: 40px;
+  width: 100px;
+  margin: 0px auto 30px auto;
+}
+
+.switch .button{
+  display: block; 
+  position: absolute;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #AAA;
+  border-radius: 100%;
+  background: #48E8AA;
+  height: 32px; 
+  width: 32px;
+  top: 4px;
+  left: 4px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.25)
+}
+
+/* TOGGLE */
+
+.switch .button {
+    transition: left .25s ease-in-out;
+    -webkit-transition: left .25s ease-in-out;
+}
+
+input[type=checkbox]:checked ~ .switch .button {
+    position: absolute;
+    left: 64px;
+}
+    </style>
+</head>
+<body>
+  
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+        
+        <div class="switch">
+          <div class="button"></div>
+        </div>
+        
+</body>
+</html>
