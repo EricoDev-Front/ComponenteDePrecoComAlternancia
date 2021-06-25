@@ -9,9 +9,10 @@
 body{
     font-size: 15px;
     font-family: 'Montserrat Alternates', sans-serif;
+    background: url(../images/bg-top.svg) no-repeat top right, url(../images/bg-bottom.svg) no-repeat bottom left, @VeryLightGrayishBlue;
 }
 
-section#tituloBotao{
+section.tituloBotao{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +27,7 @@ section#tituloBotao{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 29%;
+        width: 25%;
         p{
             color: @LightGrayishBlue;
             position: relative;
@@ -84,6 +85,80 @@ section#tituloBotao{
                 -webkit-transition: left .25s ease-in-out;
               }
           }
+    }
+    .modalidades{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            color: @LightGrayishBlue;
+            font-size: 16px;
+            text-align: center;
+        }
+        h3{
+            font-size: 3em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            span{
+                font-size: 25px;
+            }
+        }
+        .row{
+            width: 90%;
+            background: @LightGrayishBlue;
+            height: 1px;
+        }
+        .caixa{
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 10px;
+            button{
+                background: @LinearGradient;
+                margin-top: 10px;
+                border-radius: 5px;
+                padding: 10px 0 10px 0;
+                width: 90%;
+                margin-bottom: 10px;
+                border: none;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover{
+                    background: transparent;
+                    border: 1px @GrayishBlue solid;
+                    color: @GrayishBlue;
+                }
+            }
+            &.professional{
+                background: @LinearGradient;
+                padding: 20px 0 20px 0;
+                p{
+                    color: white;
+                }
+                .row{
+                    background: white;
+                }
+                h3{
+                    color: white;
+                }
+                button{
+                    background: white;
+                    color:rgba(9,9,121,1);
+                    &:hover{
+                        background: transparent;
+                        border: 1px white solid;
+                        color: white;
+                    }
+                }
+            }
+        }
+        
+        
     }
     
 }
